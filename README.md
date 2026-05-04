@@ -65,10 +65,9 @@ Right panel: absolute error as a 2D heatmap.
 
 The training curves summarize the convergence of the KAN-based Stefan solver. The loss plot reports the evolution of the total loss and individual physics-informed loss components, including the heat-equation residual, initial-condition loss, interface loss, and Stefan-condition loss. The relative-error plot tracks the accuracy of the learned solution during training.
 
-<p align="center">
-  <img src="./Stefan_Problem/KAN_model/training_losses.png" width="48%" alt="Training losses">
-  <img src="./Stefan_Problem/KAN_model/relative_errors.png" width="48%" alt="Relative errors">
-</p>
+![Training losses](./Stefan_Problem/KAN_model/training_losses.png)
+
+![Relative errors](./Stefan_Problem/KAN_model/relative_errors.png)
 
 ---
 
