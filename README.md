@@ -66,8 +66,8 @@ Right panel: absolute error as a 2D heatmap.
 The training curves summarize the convergence of the KAN-based Stefan solver. The loss plot reports the evolution of the total loss and individual physics-informed loss components, including the heat-equation residual, initial-condition loss, interface loss, and Stefan-condition loss. The relative-error plot tracks the accuracy of the learned solution during training.
 
 <p align="center">
-  <img src="./Stefan_Problem/KAN_model/gif/training_losses.png" width="49%" alt="Training losses">
-  <img src="./Stefan_Problem/KAN_model/gif/relative_errors.png" width="49%" alt="Relative errors">
+  <img src="./Stefan_Problem/KAN_model/gif/training_losses.png" width="40%" alt="Training losses">
+  <img src="./Stefan_Problem/KAN_model/gif/relative_errors.png" width="40%" alt="Relative errors">
 </p>
 
 <p align="center">
@@ -139,20 +139,20 @@ The panels below show the obstacle function, exact solution, KAN approximation, 
 <!-- Update these paths to match your repository if needed. -->
 
 <p align="center">
-  <img src="./Obstacle_2D_pLaplacian/outputs_kan_plap_obstacle_exact/obstacle_3d.png" width="32%" alt="Discontinuous obstacle function">
+  <img src="./Obstacle_2D_pLaplacian/outputs_kan_plap_obstacle_exact/obstacle_3d.png" width="40%" alt="Discontinuous obstacle function">
 </p>
 
 
 <p align="center">
-  <img src="./Obstacle_2D_pLaplacian/outputs_kan_plap_obstacle_exact/u_exact_3d.png" width="32%" alt="Exact Solution">
-  <img src="./Obstacle_2D_pLaplacian/outputs_kan_plap_obstacle_exact/u_pred_3d.png" width="32%" alt="Predicted KAN Approximation">
-  <img src="./Obstacle_2D_pLaplacian/outputs_kan_plap_obstacle_exact/absolute_error_2d.png" width="32%" alt="Absolute Error">
+  <img src="./Obstacle_2D_pLaplacian/outputs_kan_plap_obstacle_exact/u_exact_3d.png" width="40%" alt="Exact Solution">
+  <img src="./Obstacle_2D_pLaplacian/outputs_kan_plap_obstacle_exact/u_pred_3d.png" width="40%" alt="Predicted KAN Approximation">
+  <img src="./Obstacle_2D_pLaplacian/outputs_kan_plap_obstacle_exact/absolute_error_2d.png" width="40%" alt="Absolute Error">
 </p>
 
 
 <p align="center">
-  <img src="./Obstacle_2D_pLaplacian/outputs_kan_plap_obstacle_exact/loss_components_logscale.png" width="32%" alt="Training losses">
-  <img src="./Obstacle_2D_pLaplacian/outputs_kan_plap_obstacle_exact/relative_errors_logscale.png" width="32%" alt="Relative errors">
+  <img src="./Obstacle_2D_pLaplacian/outputs_kan_plap_obstacle_exact/loss_components_logscale.png" width="40%" alt="Training losses">
+  <img src="./Obstacle_2D_pLaplacian/outputs_kan_plap_obstacle_exact/relative_errors_logscale.png" width="40%" alt="Relative errors">
 </p>
 
 
