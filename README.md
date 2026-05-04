@@ -94,7 +94,58 @@ Right panel: logarithmic absolute error $\log_{10}|s_{\mathrm{KAN}}-s_{\mathrm{e
 
 ---
 
-## 5. Repository Features
+---
+
+## 5. KAN Solver for the p-Laplacian Obstacle Problem
+
+This repository also includes a KAN-based physics-informed solver for a nonlinear p-Laplacian obstacle problem. This problem extends the classical obstacle formulation by replacing the standard Laplacian operator with the nonlinear p-Laplacian operator.
+
+The goal is to approximate the constrained solution
+
+$$
+u(x_1,x_2)
+$$
+
+subject to the obstacle condition
+
+$$
+u(x_1,x_2) \geq \psi(x_1,x_2),
+$$
+
+where $\psi$ is the prescribed obstacle function.
+
+The p-Laplacian operator is given by
+
+$$
+\Delta_p u
+=
+\nabla \cdot \left(|\nabla u|^{p-2}\nabla u\right),
+$$
+
+so the model must learn a solution satisfying both the nonlinear PDE constraint and the free-boundary/contact-region structure.
+
+The KAN approximation is trained using residual-based loss terms associated with:
+
+- the obstacle constraint,
+- the nonlinear p-Laplacian residual,
+- the complementarity condition,
+- and the boundary condition.
+
+The numerical results compare the KAN approximation with baseline neural-network architectures and visualize the predicted solution, pointwise error, and training convergence.
+
+### p-Laplacian Obstacle Problem Results
+
+The panels below show the obstacle function, exact solution, KAN approximation, pointwise absolute error, and convergence curves for the p-Laplacian obstacle problem.
+
+<!-- Update these paths to match your repository if needed. -->
+
+<p align="center">
+  <img src="./ObstacleProblem_2D_pLaplacian/KAN_model/plaplacian_obstacle_results.png" width="95%" alt="p-Laplacian obstacle problem results">
+</p>
+
+
+
+## 6. Repository Features
 
 This repository provides:
 
@@ -109,7 +160,7 @@ This repository provides:
 
 ---
 
-## 6. Problems Included
+## 7. Problems Included
 
 The repository contains KAN-based solvers for:
 
