@@ -118,8 +118,7 @@ The p-Laplacian operator is given by
 
 $$
 \Delta_p u
-=
-\nabla \cdot \left(|\nabla u|^{p-2}\nabla u\right),
+= \nabla \cdot \left(|\nabla u|^{p-2}\nabla u\right),
 $$
 
 so the model must learn a solution satisfying both the nonlinear PDE constraint and the free-boundary/contact-region structure.
