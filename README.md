@@ -150,6 +150,12 @@ The panels below show the obstacle function, exact solution, KAN approximation, 
 </p>
 
 
+<p align="center">
+  <img src="./Obstacle_2D_pLaplacian/outputs_kan_plap_obstacle_exact/loss_components_logscale.png" width="32%" alt="Training losses">
+  <img src="./Obstacle_2D_pLaplacian/outputs_kan_plap_obstacle_exact/relative_errors_logscale.png" width="32%" alt="Relative errors">
+</p>
+
+
 
 
 ## 6. Repository Features
