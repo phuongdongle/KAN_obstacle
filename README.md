@@ -87,9 +87,9 @@ Middle panel: predicted free surface $\hat{s}(x_2,t)$.
 Right panel: logarithmic absolute error $\log_{10}|s_{\mathrm{KAN}}-s_{\mathrm{exact}}|$.
 
 <p align="center">
-  <img src="./Stefan_Problem/KAN_model/free_surface/free_surface_exact.png" width="32%" alt="Exact free surface">
-  <img src="./Stefan_Problem/KAN_model/free_surface/free_surface_predicted.png" width="32%" alt="Predicted free surface">
-  <img src="./Stefan_Problem/KAN_model/free_surface/free_surface_log_absolute_error.png" width="32%" alt="Free-surface error">
+  <img src="./Stefan_Problem/KAN_model/gif/free_surface/free_surface_exact.png" width="32%" alt="Exact free surface">
+  <img src="./Stefan_Problem/KAN_model/gif/free_surface/free_surface_predicted.png" width="32%" alt="Predicted free surface">
+  <img src="./Stefan_Problem/KAN_model/gif/free_surface/free_surface_log_absolute_error.png" width="32%" alt="Free-surface error">
 </p>
 
 ---
