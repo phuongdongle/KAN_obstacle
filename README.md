@@ -52,7 +52,7 @@ The KAN model is trained by minimizing residual losses associated with:
 
 ## 2. Time-Dependent KAN Prediction and Error
 
-The animation below shows the learned KAN solution $u_{\mathrm{KAN}}(x_1,x_2,t)$ evolving from $t=0$ to $t=1$, together with the pointwise absolute error.
+The animation below shows the learned KAN solution $u_{\mathrm{KAN}}(x_1,x_2,t)$ evolving from $t=0$ to final time $T=1$, together with the pointwise absolute error.
 
 Left panel: predicted KAN solution as a 3D surface.  
 Right panel: absolute error as a 2D heatmap.
