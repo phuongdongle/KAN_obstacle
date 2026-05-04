@@ -57,7 +57,7 @@ The animation below shows the learned KAN solution $u_{\mathrm{KAN}}(x_1,x_2,t)$
 Left panel: predicted KAN solution as a 3D surface.  
 Right panel: absolute error as a 2D heatmap.
 
-![KAN Stefan prediction and error](./Stefan_Problem/KAN_model/gif/kan_stefan_upred_error_panel.gif)
+![KAN Stefan prediction and error](./Stefan_Problem/KAN_model/gif/kan_stefan_exact_upred_error_panel.gif)
 
 ---
 
