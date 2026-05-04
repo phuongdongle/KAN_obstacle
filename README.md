@@ -139,7 +139,7 @@ The panels below show the obstacle function, exact solution, KAN approximation, 
 <!-- Update these paths to match your repository if needed. -->
 
 <p align="center">
-  <img src="./Obstacle_2D_pLaplacian/outputs_kan_plap_obstacle_exact/obstacle_3d.png" width="95%" alt="Discontinuous obstacle function">
+  <img src="./Obstacle_2D_pLaplacian/outputs_kan_plap_obstacle_exact/obstacle_3d.png" width="32%" alt="Discontinuous obstacle function">
 </p>
 
 
