@@ -58,4 +58,4 @@ Left panel: predicted KAN solution as a 3D surface.
 Right panel: absolute error as a 2D heatmap.
 
 ```markdown
-![KAN Stefan prediction and error](Stefan_Problem/KAN_Model/gif/kan_stefan_upred_error_panel.gif)
+![KAN Stefan prediction and error](Stefan_Problem/KAN_model/gif/kan_stefan_upred_error_panel.gif)
