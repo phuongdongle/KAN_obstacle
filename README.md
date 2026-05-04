@@ -143,6 +143,14 @@ The panels below show the obstacle function, exact solution, KAN approximation, 
 </p>
 
 
+<p align="center">
+  <img src="./Obstacle_2D_pLaplacian/outputs_kan_plap_obstacle_exact/u_exact_3d.png" width="32%" alt="Exact Solution">
+  <img src="./Obstacle_2D_pLaplacian/outputs_kan_plap_obstacle_exact/u_pred_3d.png" width="32%" alt="Predicted KAN Approximation">
+  <img src="./Obstacle_2D_pLaplacian/outputs_kan_plap_obstacle_exact/absolute_error_2d.png" width="32%" alt="Absolute Error">
+</p>
+
+
+
 
 ## 6. Repository Features
 
