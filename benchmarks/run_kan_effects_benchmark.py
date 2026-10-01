@@ -46,19 +46,19 @@ CUDA_VISIBLE_DEVICES is already set, so --gpu 0 selects the first allocated GPU.
 Examples
 --------
 Run all full benchmarks on GPU when available:
-    python run_kan_effects_benchmark.py --problems all
+    python benchmarks/run_kan_effects_benchmark.py --problems all
 
 Require CUDA explicitly:
-    python run_kan_effects_benchmark.py --problems all --device cuda
+    python benchmarks/run_kan_effects_benchmark.py --problems all --device cuda
 
 Run only Stefan:
-    python run_kan_effects_benchmark.py --problems stefan --device cuda
+    python benchmarks/run_kan_effects_benchmark.py --problems stefan --device cuda
 
 Smoke test:
-    python run_kan_effects_benchmark.py --problems all --quick
+    python benchmarks/run_kan_effects_benchmark.py --problems all --quick
 
 Regenerate figures only:
-    python run_kan_effects_benchmark.py --plot-only
+    python benchmarks/run_kan_effects_benchmark.py --plot-only
 """
 
 from __future__ import annotations
@@ -76,6 +76,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 import torch
 
+# Make progress messages appear promptly in Slurm logs even when Python is not
+# launched with -u. This has no effect on numerical results.
+try:
+    sys.stdout.reconfigure(line_buffering=True)
+    sys.stderr.reconfigure(line_buffering=True)
+except (AttributeError, ValueError):
+    pass
+
 
 # ============================================================
 # Project / output layout
@@ -83,22 +91,35 @@ import torch
 
 
 def locate_project_root(start: Path) -> Path:
-    """Find the repository root containing the three problem directories."""
-    required = ("Obstacle_2D_Dome", "Obstacle_2D_pLaplacian", "Stefan_Problem")
+    """
+    Find the repository root containing the three problem directories.
 
-    candidates = [
-        start,
-        start / "KAN-Free-Boundary-PDE-main",
-    ]
+    This works whether the benchmark script is placed:
+      * in the repository root,
+      * in ROOT/benchmarks/,
+      * deeper inside the repository, or
+      * next to / above a KAN-Free-Boundary-PDE-main directory.
+    """
+    required = (
+        "Obstacle_2D_Dome",
+        "Obstacle_2D_pLaplacian",
+        "Stefan_Problem",
+    )
 
-    for candidate in candidates:
+    # Search the script directory and every parent directory.
+    for candidate in (start, *start.parents):
         if all((candidate / name).is_dir() for name in required):
             return candidate.resolve()
 
+        # Backward compatibility with the earlier archive/folder name.
+        nested = candidate / "KAN-Free-Boundary-PDE-main"
+        if nested.is_dir() and all((nested / name).is_dir() for name in required):
+            return nested.resolve()
+
     raise FileNotFoundError(
-        "Could not locate the project root. Put this script in the repository "
-        "root (next to Obstacle_2D_Dome, Obstacle_2D_pLaplacian, and "
-        "Stefan_Problem), or one directory above a KAN-Free-Boundary-PDE-main folder."
+        "Could not locate the project root containing "
+        "Obstacle_2D_Dome, Obstacle_2D_pLaplacian, and Stefan_Problem. "
+        f"Benchmark script location: {start}"
     )
 
 
